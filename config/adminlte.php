@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'Sipro | ',
     'title_postfix' => '',
 
     /*
@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Sipro</b>APP',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => 'Sipro Logo',
 
     /*
     |--------------------------------------------------------------------------
@@ -110,7 +110,7 @@ return [
         'enabled' => true,
         'img' => [
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'AdminLTE Preloader Image',
+            'alt' => 'Sipro Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
             'height' => 60,
@@ -150,8 +150,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -301,88 +301,360 @@ return [
             'topnav_right' => true,
         ],
 
-        // Sidebar items:
+        // CENTRO DE GESTION
+        ['header' => 'CENTRO DE GESTIÓN'],
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
+            'text'    => 'Administrar',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
+                //SOLICITUDES
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
+                    'text'    => 'Solicitudes',
                     'url'     => '#',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
+                            'text' => 'Requisición',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+
+                 //AYUDA SOCIAL
+                 [
+                    'text'    => 'Ayuda Social',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Ayudas Sociales',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+
+                //COMPRAS Y SERVICIOS
+                [
+                    'text'    => 'Compras y Servicios',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Analisis de Cotizaciones',
                             'url'  => '#',
                         ],
                         [
-                            'text'    => 'level_two',
-                            'url'     => '#',
+                            'text' => 'Ordenes de Compras',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Ordenes de Servicios',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+
+                //CONTRATACION
+                [
+                    'text'    => 'Contratacion',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Contrataciones',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Ordenes de Compras',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Ordenes de Servicios',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+
+                //COMPROMISOS
+                [
+                    'text'    => 'Compromisos',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Compromisos',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Ajustes',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Reporte de Compromisos',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Relación de Creditos Adicionales',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+
+                //CAUSADO
+                [
+                    'text'    => 'Causado',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Compromisos por causar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Ordenes de Pago',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Causados',
+                            'url'  => '#',
+                        ],
+                       
+                    ],
+                ],
+
+                 //PAGADO
+                 [
+                    'text'    => 'Pagado',
+                    'url'     => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Pagado',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Movimientos Bancarios',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Estado de Cuenta',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Depositos',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Notas de Credito',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Notas de Debito',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Autorizar Pago',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Relación de Impuestos',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Comprobantes de Retenciones',
+                            'url'  => '#',
+                        ],
+                        //cheques
+                        [
+                            'text' => 'Cheques',
+                            'url'  => '#',
                             'submenu' => [
                                 [
-                                    'text' => 'level_three',
+                                    'text' => 'Cheque por orden de Pago',
+                                    'url'  => '#',
+                                ], 
+                                [
+                                    'text' => 'Cheque a Tercero',
                                     'url'  => '#',
                                 ],
                                 [
-                                    'text' => 'level_three',
+                                    'text' => 'Cheque entre Cuentas',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'Reposición de Cheque',
                                     'url'  => '#',
                                 ],
                             ],
                         ],
+                        //transferencias
+                        [
+                            'text' => 'Transferencias',
+                            'url'  => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Transferencia por orden de Pago',
+                                    'url'  => '#',
+                                ], 
+                                [
+                                    'text' => 'Transferencia a Tercero',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'Transferencia entre Cuentas',
+                                    'url'  => '#',
+                                ],
+                               
+                            ],
+                        ],
+                        //transferencias
+                        [
+                            'text' => 'Conciliación Bancaria',
+                            'url'  => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Cargar Estado de Cuenta',
+                                    'url'  => '#',
+                                ], 
+                                [
+                                    'text' => 'Saldos Según Conciliación',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'Procesar',
+                                    'url'  => '#',
+                                ],
+                               
+                            ],
+                        ],
+                        //configuración
+                        [
+                            'text' => 'Configuración',
+                            'url'  => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Bancos',
+                                    'url'  => '#',
+                                ], 
+                                [
+                                    'text' => 'Cuentas Bancarias',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'Chequera',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'Tipo de Movimiento Bancario',
+                                    'url'  => '#',
+                                ],
+                                [
+                                    'text' => 'Correlativo Comp. Ret.',
+                                    'url'  => '#',
+                                ],
+                               
+                            ],
+                        ],
+                        
                     ],
                 ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
+
+                
             ],
         ],
-        ['header' => 'labels'],
+        //reportes
+        ['header' => 'REPORTES'],
         [
-            'text'       => 'important',
+            'text'       => 'Ejecución Presupuestaria',
             'icon_color' => 'red',
             'url'        => '#',
         ],
+        
+        ['header' => 'CONFIGURACIÓN'],
+        //Configuracion
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text' => 'Configuración',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Clasificador Presupuestario',
+                    'url'  => '#',
+                ], 
+                [
+                    'text' => 'Plan Operativo Anual',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Metas',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Tipo de Compromisos',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Beneficiario',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Retenciones',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'BOS (Bienes, Obras, Servicios)',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Iniciar Proceso de Ejecución',
+                    'url'  => '#',
+                ],
+               
+            ],
         ],
+        //Seguridad
         [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text' => 'Seguridad',
+            'url'  => '#',
+            'submenu' => [
+                [
+                    'text' => 'Usuarios',
+                    'url'  => '#',
+                ], 
+                [
+                    'text' => 'Cambio de Contraseña',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Aplicaciones',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Grupos',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Grupo / Aplicaciones',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Sincronizar Aplicaciones',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Usuarios Logueados',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Histórico de Transacciones',
+                    'url'  => '#',
+                ],
+               
+            ],
         ],
+
+         //Modificaciones Presupuestarias
+         [
+             'text'       => 'Modificación Presupuestaria',
+             'icon_color' => 'red',
+             'url'        => '#',
+         ],
+        
+       
+
+
     ],
 
     /*

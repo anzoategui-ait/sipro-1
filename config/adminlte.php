@@ -590,6 +590,10 @@ return [
                     'url'  => '#',
                 ],
                 [
+                    'text' => 'Proveedor',
+                    'url'  => '#',
+                ],
+                [
                     'text' => 'Retenciones',
                     'url'  => '#',
                 ],

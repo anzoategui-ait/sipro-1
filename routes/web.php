@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
 Route::resource('tipossgps', App\Http\Controllers\TipossgpController::class)->middleware('auth');
+
+Route::resource('estados', App\Http\Controllers\EstadoController::class)->middleware('auth');
+
+Route::resource('municipios', App\Http\Controllers\MunicipioController::class)->middleware('auth');

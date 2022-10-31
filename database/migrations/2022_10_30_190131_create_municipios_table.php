@@ -16,11 +16,14 @@ return new class extends Migration
         Schema::create('municipios', function (Blueprint $table) {
             $table->id();
 
+            
             $table->string('nombre', 50);
             $table->string('codigo', 10);
 
             $table->bigInteger('estado_id')->unsigned();
+            
             $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
+
 
             $table->timestamps();
         });

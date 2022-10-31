@@ -570,6 +570,14 @@ return [
             'url'  => '#',
             'submenu' => [
                 [
+                    'text' => 'Estados',
+                    'route'  => 'estados.index',
+                ],
+                [
+                    'text' => 'Municipios',
+                    'route'  => 'municipios.index',
+                ],
+                [
                     'text' => 'Clasificador Presupuestario',
                     'url'  => '#',
                 ], 

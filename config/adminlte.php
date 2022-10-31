@@ -586,6 +586,10 @@ return [
                     'url'  => '#',
                 ],
                 [
+                    'text' => 'Tipo SGP',
+                    'route'  => 'tipossgps.index',
+                ],
+                [
                     'text' => 'Beneficiario',
                     'url'  => '#',
                 ],

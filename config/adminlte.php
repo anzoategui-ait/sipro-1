@@ -570,6 +570,30 @@ return [
             'url'  => '#',
             'submenu' => [
                 [
+                    'text' => 'Objetivos Historicos',
+                    'route'  => 'objetivoshistoricos.index',
+                ],
+                [
+                    'text' => 'Objetivos Nacionales',
+                    'route'  => 'objetivonacionales.index',
+                ],
+                [
+                    'text' => 'Objetivos Estrategicos',
+                    'route'  => 'objetivosestrategicos.index',
+                ],
+                [
+                    'text' => 'Objetivos PEI',
+                    'route'  => 'objetivopeis.index',
+                ],
+                [
+                    'text' => 'Detalles Ejecucion',
+                    'route'  => 'ejecuciondetalles.index',
+                ],
+                [
+                    'text' => 'Financiamiento',
+                    'route'  => 'financiamientos.index',
+                ],
+                [
                     'text' => 'Estados',
                     'route'  => 'estados.index',
                 ],
